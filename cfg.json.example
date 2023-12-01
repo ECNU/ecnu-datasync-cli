@@ -1,0 +1,17 @@
+{
+    "oauth2_config":{
+        "client_id":"client_id",
+        "client_secret":"client_secret",
+        "base_url":"https://api.ecnu.edu.cn",
+        "scopes":["ECNU-Basic"],
+        "timeout":10,
+        "debug":false
+    },
+    "api_config":{
+        "api_path":"/api/v1/organization/list",
+        "page_size":2000,
+        "batch_size":100
+    },
+    "output_file":"./test.csv"
+
+}
