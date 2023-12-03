@@ -30,7 +30,7 @@ func SyncWithConfig() error {
 	if err != nil {
 		return err
 	}
-	fmt.Printf("%s：组织机构同步 %d 条数据\n", strings.ToUpper(mode), rows)
+	fmt.Printf("%s：同步 %d 条数据\n", strings.ToUpper(mode), rows)
 	return nil
 }
 func SyncWithoutConfig(clientId *string, clientSecret *string, output *string, apiPath *string) error {
@@ -44,7 +44,6 @@ func SyncWithoutConfig(clientId *string, clientSecret *string, output *string, a
 		APIPath:  *apiPath,
 		PageSize: 2000,
 	}
-	api.SetParam("ts", "0")
 	// 获取文件后缀名
 	extention := filepath.Ext(file)
 	if extention != "" {
@@ -64,6 +63,6 @@ func SyncWithoutConfig(clientId *string, clientSecret *string, output *string, a
 	if err != nil {
 		return err
 	}
-	fmt.Printf("%s：组织机构同步 %d 条数据\n", strings.ToUpper(mode), rows)
+	fmt.Printf("%s：同步 %d 条数据\n", strings.ToUpper(mode), rows)
 	return nil
 }

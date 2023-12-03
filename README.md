@@ -50,16 +50,16 @@ ecnu-datasync-cli 是一个开源的轻量级工具，用于数据同步。它�
 > -o 的值既可以填写 csv 文件也可以填写 xlsx 文件，会自动根据文件的后缀名来判断导出的类型
 ##### 例子
 
-* 使用示例密钥访问接口 https://api.ecnu.edu.cn/api/v1/sync/fakewithts ，同步数据到 path_to_csv/test.csv 文件
+* 使用示例密钥访问接口 https://api.ecnu.edu.cn/api/v1/sync/fakewithts?ts=0 ，同步数据到 path_to_csv/test.csv 文件
 
   ```shell
-  ./ecnu-datasync-cli -c=123456 -s=abcdef -a='/api/v1/sync/fakewithts' -o='path_to_csv/test.csv'
+  ./ecnu-datasync-cli -c=123456 -s=abcdef -a='/api/v1/sync/fakewithts?ts=0' -o='path_to_csv/test.csv'
   ```
 
-* 使用示例密钥访问接口 https://api.ecnu.edu.cn/api/v1/sync/fakewithts ，同步数据到 path_to_csv/test.xlsx 文件
+* 使用示例密钥访问接口 https://api.ecnu.edu.cn/api/v1/sync/fakewithts?ts=0 ，同步数据到 path_to_xlsx/test.xlsx 文件
 
   ```shell
-  ./ecnu-datasync-cli -c=123456 -s=abcdef -a='/api/v1/sync/fakewithts' -o='path_to_csv/test.xlsx'
+  ./ecnu-datasync-cli -c=123456 -s=abcdef -a='/api/v1/sync/fakewithts?ts=0' -o='path_to_xlsx/test.xlsx'
   ```
 
 #### 使用配置文件进行同步
@@ -86,7 +86,7 @@ ecnu-datasync-cli 是一个开源的轻量级工具，用于数据同步。它�
         "debug":false
       },
       "api_config":{
-        "api_path":"/api/v1/sync/fakewithts",
+        "api_path":"/api/v1/sync/fakewithts?ts=0",
         "page_size":2000
       },
       "output_file":"./test.csv"
