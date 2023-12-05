@@ -10,6 +10,8 @@
 *.json
 *.csv
 *.xlsx
+*.zip
+*.tar.gz
 
 # Test binary, built with `go test -c`
 *.test
