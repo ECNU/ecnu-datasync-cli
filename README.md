@@ -22,17 +22,15 @@ ecnu-datasync-cli 是一个开源的轻量级工具，用于[华东师范大学�
 * 方法二：从源代码生成二进制文件
   ```shell
   git clone https://github.com/ECNU/ecnu-datasync-cli.git
-  cd datasync-sdk-cli
+  cd ecnu-datasync-cli
   go build
   ```
     > 需要 go 1.20+ 环境  
-      win 环境下请自行添加 .exe 后缀
 
-  生成的二进制文件在 datasync-sdk-cli 中
 
-2. 验证文件可用
+1. 验证文件可用(win 环境下请自行添加 .exe 后缀)
     ```shell
-    cd {PATH_TO_CLI}/datasync-sdk-cli
+    cd {PATH_TO_CLI}/ecnu-datasync-cli
     ./ecnu-datasync-cli -v
     ```
    应输出版本信息
@@ -45,7 +43,7 @@ ecnu-datasync-cli 是一个开源的轻量级工具，用于[华东师范大学�
 
 ##### 命令
 
-> 请确保处于校园网环境或使用校园网VPN
+> 请确保处于校园网环境或使用校园网VPN(win 环境下请自行添加 .exe 后缀)
 
 ```shell
 ./ecnu-datasync-cli -c {client_id} -s {client_secret} -a {api_path} -o {output_file}
